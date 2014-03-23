@@ -1,4 +1,4 @@
-package todd.noLamba;
+package todd.firstRefactor;
 
 import todd.semaphore.Take5;
 
@@ -13,7 +13,7 @@ public class TakeFiveSemaphore extends AbstractSemaphore {
 	}
 	
 	@Override
-	public boolean isConditionMet() {
+	protected boolean isConditionMet() {
 		return take5.done();
 	}
 }

@@ -1,19 +1,19 @@
-package todd.lambda;
+package todd.firstRefactor;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import todd.semaphore.Take5;
 
-public class LambdaSemaphoreTest {
-
+public class PolymorphicSemaphoreTest {
+	
 	private Semaphores semaphores;
 
 	@Before
 	public void setup() {
 		semaphores = new Semaphores();
 	}
-
+	
 	@Test
 	public void waitForSomethingThatTakesFiveSeconds() throws Exception {
 		Take5 take5 = new Take5();

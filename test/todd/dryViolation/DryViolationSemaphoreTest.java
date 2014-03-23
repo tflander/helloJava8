@@ -1,11 +1,11 @@
-package todd.lambda;
+package todd.dryViolation;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import todd.semaphore.Take5;
 
-public class LambdaSemaphoreTest {
+public class DryViolationSemaphoreTest {
 
 	private Semaphores semaphores;
 
@@ -13,7 +13,7 @@ public class LambdaSemaphoreTest {
 	public void setup() {
 		semaphores = new Semaphores();
 	}
-
+	
 	@Test
 	public void waitForSomethingThatTakesFiveSeconds() throws Exception {
 		Take5 take5 = new Take5();
@@ -25,4 +25,5 @@ public class LambdaSemaphoreTest {
 	public void waitForSomethingThatNeverFinishes() throws Exception {
 		semaphores.waitForSomethingThatNeverFinishes();
 	}
+	
 }

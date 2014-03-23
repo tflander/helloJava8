@@ -1,4 +1,4 @@
-package todd.noLamba;
+package todd.firstRefactor;
 
 
 public class FailureSemaphore extends AbstractSemaphore {
@@ -8,7 +8,7 @@ public class FailureSemaphore extends AbstractSemaphore {
 	}
 
 	@Override
-	public boolean isConditionMet() {
+	protected boolean isConditionMet() {
 		return false;
 	}
 }

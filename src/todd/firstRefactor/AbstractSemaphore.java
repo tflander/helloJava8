@@ -1,4 +1,4 @@
-package todd.noLamba;
+package todd.firstRefactor;
 
 public abstract class AbstractSemaphore {
 
@@ -9,7 +9,7 @@ public abstract class AbstractSemaphore {
 		this.name = name;
 	}
 	
-	public abstract boolean isConditionMet();
+	protected abstract boolean isConditionMet();
 	
 	public String name() {
 		return name;
