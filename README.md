@@ -5,10 +5,10 @@ A while back I ran into an issue at work where I really wished Java had lambdas.
 show what I wished I could have done to solve the problem.
 
 This demo shows a progression of refactoring across four packages:
-  1)  todd.dryViolation
-  2)  todd.firstRefactor
-  3)  todd.secondRefactor
-  4)  todd.lambda
+  1.  todd.dryViolation
+  2.  todd.firstRefactor
+  3.  todd.secondRefactor
+  4.  todd.lambda
   
 Note there are tests for each of these packages.  The tests are almost identical, as you 
 expect for a refactoring exercise.  The only differences are the test class names and the 
