@@ -1,21 +1,19 @@
 package todd.lambda;
 
+import java.util.function.BooleanSupplier;
+
 public class Semaphore {
 	
 	private int MAX_WAIT_IN_SECONDS = 10;
 	
-	public interface ConditionMet {
-		public boolean isConditionMet();
-	}
-
-	private final ConditionMet checkCondition;
+	private final BooleanSupplier isDone;
 	private final String name;
 	
-	public Semaphore(String name, ConditionMet isConditionMet) {
+	public Semaphore(String name, BooleanSupplier isDone) {
 		this.name = name;
-		this.checkCondition = isConditionMet;
+		this.isDone = isDone;
 	}
-
+	
 	public String name() {
 		return name;
 	}
@@ -24,7 +22,7 @@ public class Semaphore {
 		int counter = 0;
 		System.out.println("waiting for: " + name());
 		while(counter++ < MAX_WAIT_IN_SECONDS) {
-			if (checkCondition.isConditionMet()) {
+			if (isDone.getAsBoolean()) {
 				System.out.println(name() + " done.");
 				return;
 			}
